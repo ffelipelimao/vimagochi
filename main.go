@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
 	"os"
 	"os/exec"
@@ -18,13 +17,14 @@ func clearScreen() {
 }
 
 func main() {
-	reader := bufio.NewReader(os.Stdin)
+	// reader := bufio.NewReader(os.Stdin)
 	for {
 		IdleAnimation()
-		input, _ := reader.ReadString('\n')
+		/*input, _ := reader.ReadString('\n')
 		if input == "0\n" {
 			EatAnimation()
 		}
+		*/
 	}
 }
 
@@ -34,7 +34,7 @@ func IdleAnimation() {
 		fmt.Println(menu.Title)
 		fmt.Println(frame)
 		fmt.Println(menu.Actions)
-		time.Sleep(600 * time.Millisecond)
+		time.Sleep(500 * time.Millisecond)
 	}
 }
 
@@ -44,6 +44,6 @@ func EatAnimation() {
 		fmt.Println(menu.Title)
 		fmt.Println(frame)
 		fmt.Println(menu.Actions)
-		time.Sleep(600 * time.Millisecond)
+		time.Sleep(500 * time.Millisecond)
 	}
 }
